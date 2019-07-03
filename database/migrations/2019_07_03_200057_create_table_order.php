@@ -14,9 +14,9 @@ class CreateTableOrder extends Migration
     public function up()
     {
         Schema::create('order', function (Blueprint $table) {
-            $table->string('id')->index();
+            $table->increments('id')->index();
             $table->string('name');
-            $table->timestamp('ordernum')->nullable();
+            $table->string('ordernum');
         });
     }
 
